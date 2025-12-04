@@ -2,13 +2,13 @@
 
 ### 1. Introdução
 
-A ideia desse projeto foi fazer um **Sistema de Xadrez** rodando no console usando Java. O principal objetivo aqui não foi só fazer o jogo funcionar, mas sim meter a mão na massa e aplicar de verdade os conceitos de **POO (Programação Orientada a Objetos)**. O jogo está completo, com todas as regras de movimento, além dos movimentos especiais (Roque, En Passant, Promoção) e a detecção de Xeque e Xeque-mate.
+A ideia desse projeto foi fazer um **Sistema de Xadrez** rodando no console usando Java. O principal objetivo aqui não foi só fazer o jogo funcionar, mas sim aplicar de verdade os conceitos de **POO (Programação Orientada a Objetos)**. O jogo está completo, com todas as regras de movimento, além dos movimentos especiais (Roque, En Passant, Promoção) e a detecção de Xeque e Xeque-mate.
 
 ---
 
 ### 2. A Arquitetura: Dividindo o B.O. (Camadas)
 
-A gente organizou o código em três partes (o famoso **Padrão de Camadas**) para não virar uma bagunça e para cada pedaço cuidar só do seu trabalho.
+A gente organizou o código em três partes para não virar uma bagunça e para cada pedaço cuidar só do seu trabalho.
 
 #### 2.1. Camada `board` (A Estrutura Física)
 Essa é a base. Ela só se preocupa com a **matriz** 8x8 e as coordenadas puras (`Position`).
@@ -23,7 +23,7 @@ Aqui é onde a mágica do xadrez acontece. É o motor que conhece as regras, o t
 * **Decisão:** Essa camada lida com as coordenadas de xadrez (`a1` a `h8`) e faz a conversão para as coordenadas da matriz, isolando a lógica complexa do resto.
 
 #### 2.3. Camada `application` (A UI)
-É só a casca. Responsável por mostrar o jogo no console.
+Responsável por mostrar o jogo no console.
 
 * **Classes Chave:** `Program`, `UI`.
 * **Decisão:** Usamos códigos **ANSI** na classe `UI` para colorir as peças e os movimentos possíveis, o que facilitou muito a jogabilidade.
