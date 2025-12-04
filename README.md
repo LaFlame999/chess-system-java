@@ -57,8 +57,8 @@ Em vez de deixar o programa quebrar, a gente usou as exceções para se defender
 
 ### 4. As Regras que Deram Mais Trabalho
 
-* **Xeque-mate:** Exigiu um teste duplo: primeiro checar se está em Xeque, e depois iterar sobre *todos* os movimentos possíveis do jogador em Xeque para ver se existe *pelo menos um* movimento que tire o Rei da ameaça[cite: 197].
-* **Movimentos Especiais (Roque, En Passant):** Foram complexos porque alteram o estado de várias peças ou dependem do estado anterior da partida. [cite_start]A gente teve que atualizar os métodos **`makeMove()`** e **`undoMove()`** para dar conta dessas alterações.
+* **Xeque-mate:** Exigiu um teste duplo: primeiro checar se está em Xeque, e depois iterar sobre *todos* os movimentos possíveis do jogador em Xeque para ver se existe *pelo menos um* movimento que tire o Rei da ameaça.
+* **Movimentos Especiais (Roque, En Passant):** Foram complexos porque alteram o estado de várias peças ou dependem do estado anterior da partida. A gente teve que atualizar os métodos **`makeMove()`** e **`undoMove()`** para dar conta dessas alterações.
 * **Estruturas de Dados:** Usamos a **Matriz** para o tabuleiro e **Listas** (`ArrayList`) na `ChessMatch` para rastrear dinamicamente as peças ativas e capturadas, o que facilitou a busca e o gerenciamento do estado.
 
 ---
