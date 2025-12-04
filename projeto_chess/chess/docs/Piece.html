@@ -1,0 +1,49 @@
+/**
+* Classe abstrata base para todas as peças do jogo (camada 'board').
+* É uma associação com o tabuleiro (Board).
+*/
+public abstract class Piece {
+
+protected Position position;
+private Board board;
+
+/**
+* Construtor de peça, associando-a a um tabuleiro.
+* @param board O tabuleiro ao qual a peça pertence.
+*/
+public Piece(Board board) {
+// ...
+}
+
+/**
+* Retorna o tabuleiro. Usado por subclasses e classes do mesmo pacote.
+* @return O objeto Board associado.
+*/
+protected Board getBoard() {
+// ...
+}
+
+/**
+* Define a matriz de movimentos possíveis para a peça.
+* É um método abstrato, obrigando cada peça a implementar sua própria lógica de movimento.
+* @return Uma matriz booleana (true = movimento possível).
+*/
+public abstract boolean[][] possibleMoves();
+
+/**
+* Testa se a peça pode mover para uma posição específica.
+* @param position Posição de destino.
+* @return true se o movimento for permitido; false caso contrário.
+*/
+public boolean possibleMove(Position position) {
+// ...
+}
+
+/**
+* Verifica se existe pelo menos um movimento possível para a peça no tabuleiro.
+* @return true se houver qualquer movimento disponível.
+*/
+public boolean isThereAnyPossibleMove() {
+// ...
+}
+}

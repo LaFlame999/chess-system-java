@@ -1,0 +1,63 @@
+/**
+* Representa a partida de xadrez, gerenciando as regras do jogo, turnos e estado.
+* Esta classe implementa o Padrão de Camadas (Layers Pattern), atuando como a camada de serviço/regras.
+*/
+public class ChessMatch {
+
+private Board board;
+private Color currentPlayer;
+private int turn;
+private boolean check;
+private boolean checkmate;
+private Piece enPassantVulnerable;
+private ChessPiece promoted;
+
+// ... Listas ...
+
+/**
+* Construtor que inicializa a partida de xadrez, cria o tabuleiro (Board) e
+* realiza a configuração inicial das peças (initialSetup).
+*/
+public ChessMatch() {
+// ...
+}
+
+/**
+* Retorna a matriz de peças de xadrez no tabuleiro.
+* Inclui Downcasting de Piece para ChessPiece.
+* @return Uma matriz bidimensional de ChessPiece.
+*/
+public ChessPiece[][] getPieces() {
+// ...
+}
+
+/**
+* Tenta realizar um movimento de xadrez da posição de origem para a de destino.
+* Envolve todas as validações de regras e tratamento de exceções.
+* @param sourcePosition Posição de origem (ex: a2).
+* @param targetPosition Posição de destino (ex: a3).
+* @return ChessPiece A peça capturada (ou null, se não houver captura).
+* @throws ChessException Se o movimento violar alguma regra (ex: se colocar em cheque).
+*/
+public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
+// ...
+}
+
+/**
+* Verifica se o Rei da cor especificada está em cheque (sob ataque).
+* @param color A cor do Rei a ser verificado.
+* @return true se o Rei estiver em cheque.
+*/
+protected boolean testCheck(Color color) {
+// ...
+}
+
+/**
+* Verifica se o Rei da cor especificada está em xeque-mate.
+* @param color A cor do Rei a ser verificado.
+* @return true se for xeque-mate.
+*/
+protected boolean testCheckmate(Color color) {
+// ...
+}
+}

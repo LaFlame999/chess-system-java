@@ -1,0 +1,49 @@
+/**
+* Representa o tabuleiro do jogo (matriz de peças).
+* Implementa a programação defensiva para validar a existência de posições.
+*/
+public class Board {
+
+private int rows;
+private int columns;
+private Piece[][] pieces;
+
+/**
+* Construtor para criar um tabuleiro com o número especificado de linhas e colunas.
+* @param rows Número de linhas (deve ser >= 1).
+* @param columns Número de colunas (deve ser >= 1).
+* @throws BoardException se as dimensões forem inválidas.
+*/
+public Board(int rows, int columns) {
+// ...
+}
+
+/**
+* Coloca uma peça na posição especificada do tabuleiro.
+* @param piece A peça a ser colocada.
+* @param position A posição na matriz onde a peça será colocada.
+* @throws BoardException se já houver uma peça na posição.
+*/
+public void placePiece(Piece piece, Position position) {
+// ...
+}
+
+/**
+* Remove a peça na posição especificada e retorna essa peça.
+* @param position Posição da matriz de onde a peça será removida.
+* @return A peça removida, ou null se a posição estiver vazia.
+*/
+public Piece removePiece(Position position) {
+// ...
+}
+
+/**
+* Verifica se existe uma peça na posição do tabuleiro.
+* @param position Posição a ser verificada.
+* @return true se houver uma peça na posição.
+*/
+public boolean thereIsAPiece(Position position) {
+// ...
+}
+// ...
+}

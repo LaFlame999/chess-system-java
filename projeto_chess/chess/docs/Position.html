@@ -1,0 +1,39 @@
+/**
+* Representa uma posição no tabuleiro usando coordenadas de matriz (linha e coluna).
+* Esta classe é fundamental para a camada 'board'.
+*/
+public class Position {
+
+private int row;
+private int column;
+
+/**
+* Construtor para inicializar uma nova posição.
+* @param row A linha da matriz (0 a 7).
+* @param column A coluna da matriz (0 a 7).
+*/
+public Position(int row, int column) {
+this.row = row;
+this.column = column;
+}
+
+/**
+* Define os valores de linha e coluna da posição, permitindo a reutilização do objeto.
+* @param row A nova linha.
+* @param column A nova coluna.
+*/
+public void setValues(int row, int column) {
+this.row = row;
+this.column = column;
+}
+
+// ... Getters e Setters ...
+
+/**
+* Retorna a posição no formato de string (ex: "0, 0").
+*/
+@Override
+public String toString() {
+return row + ", " + column;
+}
+}

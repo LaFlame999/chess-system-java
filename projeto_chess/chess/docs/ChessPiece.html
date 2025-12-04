@@ -1,0 +1,38 @@
+/**
+* Superclasse abstrata para todas as peças específicas do xadrez (camada 'chess').
+* Implementa Herança de Piece e adiciona lógica como cor, contador de movimentos e acesso à posição de xadrez.
+*/
+public abstract class ChessPiece extends Piece {
+
+private Color color;
+private int moveCount;
+
+/**
+* Construtor de peça de xadrez.
+* @param board O tabuleiro associado.
+* @param color A cor da peça (WHITE ou BLACK).
+*/
+public ChessPiece(Board board, Color color) {
+super(board);
+this.color = color;
+this.moveCount = 0;
+}
+
+/**
+* Retorna a contagem de movimentos da peça.
+*/
+public int getMoveCount() {
+return moveCount;
+}
+
+/**
+* Verifica se a posição possui uma peça inimiga.
+* Usado nas regras de captura e movimento.
+* @param position A posição a ser verificada.
+* @return true se houver uma peça de cor oposta.
+*/
+protected boolean isThereOpponentPiece(Position position) {
+// ...
+}
+// ...
+}

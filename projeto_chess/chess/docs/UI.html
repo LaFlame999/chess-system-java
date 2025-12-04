@@ -1,0 +1,45 @@
+/**
+* Classe utilitária para a interface de usuário (UI) baseada em console.
+* Responsável por imprimir o tabuleiro, ler a entrada do usuário e exibir o status da partida.
+*/
+public class UI {
+
+// ... Constantes ANSI para cores ...
+
+/**
+* Limpa a tela do console (funciona em terminais que suportam códigos ANSI).
+*/
+public static void clearScreen() {
+// ...
+}
+
+/**
+* Lê a entrada do usuário e a converte para um objeto ChessPosition.
+* @param sc O Scanner de entrada.
+* @return O objeto ChessPosition criado.
+* @throws InputMismatchException se o formato da entrada for inválido (ex: "a9" ou "z2").
+*/
+public static ChessPosition readChessPosition(Scanner sc) {
+// ...
+}
+
+/**
+* Imprime o tabuleiro e o status atual da partida (turno, jogador, peças capturadas, cheque).
+* @param chessMatch O objeto ChessMatch com o estado atual do jogo.
+* @param captured A lista de peças capturadas.
+*/
+public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured) {
+    // ...
+    }
+
+    /**
+    * Imprime o tabuleiro, opcionalmente destacando os movimentos possíveis.
+    * É um método sobrecarregado (Overloading).
+    * @param pieces Matriz de ChessPiece a ser impressa.
+    * @param possibleMoves Matriz booleana para destacar movimentos (pode ser null).
+    */
+    public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves) {
+    // ...
+    }
+    // ...
+    }
